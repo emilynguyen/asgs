@@ -1,0 +1,40 @@
+.outer-container {
+  max-width: 1800px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 1rem;
+  box-sizing: content-box;
+  @include sm-up {
+    padding: 0 2rem;
+  }
+  @include md-up {
+    padding: 0 4rem;
+  }
+}
+
+.inner-container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $xl-screen;
+  padding: 0 4vw;
+
+  @include md-up {
+    padding: 0 5rem;
+  }
+  @include lg-up {
+    padding: 0 10rem;
+  }
+  @include xl-up {
+    //padding: 0 8rem;
+  }
+  &.margin {
+    margin-top: $md-gap;
+  }
+}
+
+.block {
+  margin-top: $md-gap;
+  @include md-up {
+    margin-top: $lg-gap;
+  }
+}

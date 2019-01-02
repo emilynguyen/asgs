@@ -1,0 +1,71 @@
+html {
+  font-size: 50%;
+  @include sm-up {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.6rem;
+  font-family: "Neuzeit Grotesk", sans-serif;
+  color: $gray;
+  line-height: 2.3rem;
+  letter-spacing: 0.04rem;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: bold;
+  color: $green;
+  line-height: 6rem;
+  margin: 3rem 0;
+  @include sm-up {
+    font-size: 9rem;
+    line-height: 9.2rem;
+  }
+}
+
+h1,
+h2,
+h3 {
+  text-transform: lowercase;
+}
+
+h2 {
+  font-size: 3rem;
+  color: $dark-gray;
+  letter-spacing: 0;
+  line-height: 3.2rem;
+  margin: 2rem 0 1.4rem;
+}
+
+h3 {
+  color: $orange;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.small-text {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+li {
+  a {
+    transition: opacity 0.3s;
+    border-bottom: 0.1rem solid $gray;
+    @include hover {
+      opacity: 0.5;
+    }
+  }
+}

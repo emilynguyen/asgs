@@ -1,0 +1,122 @@
+#confetti-container {
+  background-color: $blue;
+  overflow: hidden;
+  height: 25rem;
+  width: 100%;
+  position: relative;
+  @include sm-up {
+    height: 45rem;
+  }
+}
+
+#confetti-text {
+  user-select: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: -0.04rem;
+  line-height: 0;
+  white-space: nowrap;
+  top: 50%;
+  text-shadow: 0 0 4rem $blue;
+  font-size: 5vw;
+  @include sm-up {
+    font-size: 4vw;
+  }
+  @include xl-up {
+    font-size: 5.1rem;
+  }
+}
+
+#confetti-canvas {
+  background-color: $blue;
+}
+
+#news-bg {
+  //background-color: $green-gray;
+}
+
+#news-container {
+  //padding: $md-gap 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 3rem;
+  @include sm-up {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+  }
+  @include xl-up {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5rem;
+  }
+}
+
+.news-card {
+  transition: 0.3s;
+  @include hover {
+    transform: scale(1.04);
+  }
+  img {
+    width: 100%;
+  }
+  h2 {
+  }
+  h2,
+  p {
+    padding: 0 0.5rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+  @include xl-up {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*
+.news-card {
+  background-color: #fff;
+  padding: 0 0 2rem;
+  box-shadow: 0rem 1rem 1.5rem rgba(0, 0, 0, 0.01);
+  transition: 0.3s;
+  @include hover {
+    transform: scale(1.04);
+    box-shadow: 0rem 1.5rem 1.5rem rgba(0, 0, 0, 0.01);
+  }
+  img {
+    width: 100%;
+  }
+  h2 {
+  }
+  h2,
+  p {
+    padding: 0 3rem;
+  }
+  @include md-up {
+    padding: 0 0 2.5rem;
+  }
+}
+*/
+.spotlight-container {
+  img {
+    width: 100%;
+    transition: 0.3s;
+    @include hover {
+      transform: scale(1.02);
+    }
+  }
+  .text {
+    margin-top: 1.5rem;
+  }
+  @include md-up {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 4rem;
+  }
+}

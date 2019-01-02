@@ -1,0 +1,67 @@
+---
+layout: default
+title: Home
+permalink: /
+order: 1
+---
+
+<script src="assets/scripts/confetti-js-master/dist/index.js"></script>
+<div class="outer-container">
+  <div id="confetti-container">
+    <div id="confetti-text">collaborate | create | inspire</div>
+    <canvas id="confetti-canvas"></canvas>
+  </div>
+</div>
+
+<div id="news" class="outer-container block">
+  <div class="inner-container"><h1>news</h1></div>
+  <div id="news-bg">
+    <div class="inner-container">
+      <div id="news-container">
+        {% for entry in site.data.news %}
+        <div class="news-card">
+          <a href="{{ entry.link }}" target="_blank"
+            ><img src="/assets/images/home/{{ entry.img }}"
+          /></a>
+          <h2>{{ entry.title }}</h2>
+          <p class="small-text">{{ entry.copy }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="spotlight" class="outer-container block">
+  <div class="inner-container">
+    <h1>Spotlight</h1>
+    {% for entry in site.data.spotlight %}
+    <div class="spotlight-container">
+      <a href="{{ entry.link }}" target="_blank"
+        ><img src="/assets/images/home/{{ entry.img }}"
+      /></a>
+      <div class="text">
+        <h2>{{ entry.title }}</h2>
+        <p>{{ entry.copy }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  var confettiSettings = {
+    target: "confetti-canvas",
+    max: "100",
+    size: "3",
+    animate: true,
+    props: ["square"],
+    colors: [[171, 191, 42], [231, 113, 87], [7, 175, 142]],
+    clock: "4",
+    rotate: false,
+    width: "1800",
+    height: "500"
+  };
+  var confetti = new ConfettiGenerator(confettiSettings);
+  confetti.render();
+</script>

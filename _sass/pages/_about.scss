@@ -1,0 +1,45 @@
+#about {
+  p {
+    margin: 1rem 0 2rem;
+    @include md-up {
+      margin: 2rem 0 4rem;
+    }
+  }
+}
+
+#mission-philosophy {
+  display: grid;
+  @include md-up {
+    grid-gap: 6rem;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+#services {
+  display: grid;
+  @include sm-up {
+    grid-gap: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include md-up {
+    grid-gap: 12rem;
+  }
+  ul {
+    margin-bottom: 2rem;
+    @include md-up {
+      margin-bottom: 0;
+    }
+  }
+  li {
+    display: inline;
+    &:not(:last-child):after {
+      content: ",";
+    }
+    @include sm-up {
+      display: block;
+      &:not(:last-child):after {
+        content: "";
+      }
+    }
+  }
+}
