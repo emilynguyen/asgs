@@ -3,7 +3,7 @@ header {
   display: flex;
   align-items: center;
   .inner-container {
-    margin-top: 2rem;
+    margin-top: 0.3rem;
     width: 100%;
   }
   @include sm-up {
@@ -25,7 +25,7 @@ header {
 }
 
 #nav-logo {
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
   @include sm-up {
     margin-bottom: 0;
   }
@@ -47,14 +47,12 @@ header {
     text-transform: lowercase;
     text-decoration: none;
     display: inline-block;
-    padding: 0.8rem 1.1rem 0.3rem;
+    padding: 0.5rem 1rem 0.2rem;
     transition: background-color 0.3s, color 0.3s, opacity 0.3s;
     &:not(:last-child) {
       margin-right: 0.4rem;
     }
     &.active {
-      //border: 0.2rem solid $green;
-      //padding: 0.5rem 0.9rem 0rem;
       color: #fff;
       background-color: $orange;
     }
@@ -62,10 +60,6 @@ header {
       padding: 1.4rem 2rem 0.8rem;
       &:not(:last-child) {
         margin-right: 1rem;
-      }
-      &.active {
-        //border: 0.2rem solid $green;
-        //padding: 1.3rem 1.8rem 0.7rem;
       }
     }
   }

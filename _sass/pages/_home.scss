@@ -103,6 +103,7 @@
   }
 }
 */
+
 .spotlight-container {
   img {
     width: 100%;
@@ -113,6 +114,9 @@
   }
   .text {
     margin-top: 1.5rem;
+    @include md-up {
+      margin-top: 0;
+    }
   }
   @include md-up {
     display: grid;

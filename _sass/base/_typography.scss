@@ -19,8 +19,9 @@ h1 {
   font-weight: bold;
   color: $green;
   line-height: 6rem;
-  margin: 3rem 0;
+  margin: 2rem 0;
   @include sm-up {
+    margin: 3rem 0;
     font-size: 9rem;
     line-height: 9.2rem;
   }
