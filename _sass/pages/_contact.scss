@@ -1,0 +1,7 @@
+#contact-container {
+  display: grid;
+  @include xs-up {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+  }
+}

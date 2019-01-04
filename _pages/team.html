@@ -6,5 +6,20 @@ order: 4
 ---
 
 <div id="team" class="outer-container block">
-  <div class="inner-container"><h1>Design Team</h1></div>
+  <div class="inner-container">
+    <h1>Design Team</h1>
+    <div id="team-container">
+      {% for member in site.data.team %}
+      <div class="member">
+        <img src="/assets/images/team/{{ member.img }}" alt="" />
+        <div class="text">
+          <h2>{{ member.name }}</h2>
+          <h3>{{ member.position }}</h3>
+          <p class="small-text big-bio">{{ member.bio }}</p>
+        </div>
+        <p class="small-text small-bio">{{ member.bio }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>

@@ -1,0 +1,53 @@
+#team {
+  h2 {
+    margin: 0;
+  }
+  h3 {
+    margin-bottom: 1rem;
+  }
+  img {
+    height: 8rem;
+    margin-right: 1.5rem;
+    transition: transform 0.3s;
+    @include xs-up {
+      margin-right: 3rem;
+      height: 15rem;
+    }
+    @include md-up {
+      height: 20rem;
+    }
+    @include hover {
+      transform: scale(1.06);
+    }
+  }
+  .small-bio {
+    margin-top: 1.5rem;
+    grid-column: 1 / -1;
+    @include xs-up {
+      margin-top: 0;
+      display: none;
+    }
+  }
+  .big-bio {
+    display: none;
+    @include xs-up {
+      display: inline-block;
+    }
+  }
+  .text {
+    margin-top: 0.8rem;
+    @include xs-up {
+      margin-top: 0;
+    }
+  }
+  .member {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+    @include xs-up {
+      //grid-template-columns: auto 1fr;
+    }
+  }
+}
