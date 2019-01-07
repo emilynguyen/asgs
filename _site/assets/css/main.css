@@ -421,6 +421,8 @@ footer {
     .grid-item:hover .grid-item-overlay {
       opacity: 1; } }
 
+#work ul {
+  list-style: none; }
 #work .text {
   padding: 4rem; }
 #work .title {
@@ -429,6 +431,22 @@ footer {
   text-transform: lowercase;
   color: #fff;
   margin: 0; }
+#work #arrows {
+  margin-top: 2rem;
+  color: #fff;
+  font-size: 4rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  #work #arrows span {
+    margin: 1rem;
+    opacity: 0.2;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s; }
+    @media (hover: hover) {
+      #work #arrows span:hover {
+        opacity: 1; } }
 
 #work-container {
   margin-top: 2rem; }
@@ -454,7 +472,8 @@ footer {
     padding: 0;
     margin-top: 4rem; }
   #work-popup .title {
-    font-size: 130%; }
+    font-size: 130%;
+    line-height: 130%; }
   @media (min-width: 600px) {
     #work-popup .text,
     #work-popup .title {
@@ -501,8 +520,6 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(170, 190, 43, 0.9);
   background-color: rgba(1, 52, 69, 0.95);
   height: 100%;
   width: 100%;

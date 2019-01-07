@@ -9,12 +9,14 @@ order: 2
   <div id="work-popup">
     <div id="work-popup-wrapper">
       <div id="work-popup-container">
-        <img
-          src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/47572781_2097568586931495_165241367700701184_o.jpg?_nc_cat=110&_nc_ht=scontent-lax3-1.xx&oh=3c6b21b1280d45696962553c1558baea&oe=5CC2EB76"
-        />
+        <img src="" alt="" />
         <div class="text">
-          <h3 class="title">Bear Garden</h3>
-          <p class="description">Poster Design</p>
+          <h3 class="title"></h3>
+          <p class="description"></p>
+          <p id="arrows">
+            <span onclick="prevItem()"><</span
+            ><span onclick="nextItem()">></span>
+          </p>
         </div>
       </div>
     </div>
@@ -22,10 +24,10 @@ order: 2
   <div class="inner-container">
     <h1>Work</h1>
 
-    <div id="work-container">
+    <ul id="work-container">
       <div class="grid-sizer"></div>
       {% for item in site.data.work %}
-      <div class="grid-item">
+      <li class="grid-item">
         <div class="grid-item-overlay">
           <div class="text">
             <h3 class="title">{{ item.title }}</h3>
@@ -33,9 +35,9 @@ order: 2
           </div>
         </div>
         <img src="{{ item.img }}" alt="{{ item.title }}" />
-      </div>
-      {%endfor%}
-    </div>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
 
@@ -62,16 +64,21 @@ order: 2
 </script>
 
 <script>
-  let items = document.getElementsByClassName("grid-item");
+  const ITEMS = document.getElementsByClassName("grid-item");
+  let CURR_ITEM = null;
+
   let i;
-  for (i = 0; i < items.length; i++) {
-    items[i].addEventListener("click", function() {
+  for (i = 0; i < ITEMS.length; i++) {
+    ITEMS[i].addEventListener("click", function() {
       openPopup(this);
     });
   }
 
   // Update popup info
   function updatePopup(item) {
+    console.log(item);
+    CURR_ITEM = item;
+
     // Get info of clicked on item
     const img = item.querySelector("img").src;
     const title = item.querySelector(".title").innerHTML;
@@ -80,6 +87,7 @@ order: 2
     // Pass info to popup
     const popup = document.getElementById("work-popup");
     popup.querySelector("img").src = img;
+    popup.querySelector("img").alt = title;
     popup.querySelector(".title").innerHTML = title;
     popup.querySelector(".description").innerHTML = description;
   }
@@ -89,11 +97,52 @@ order: 2
     updatePopup(item);
     const popup = document.getElementById("work-popup");
     popup.classList.toggle("active");
-    console.log("open");
   }
 
+  function prevItem() {
+    let newItem = CURR_ITEM.previousElementSibling;
+    // Skip if .grid-sizer
+    if (newItem.classList.contains("grid-sizer")) {
+      newItem = newItem.previousElementSibling;
+    }
+    // Go to end if no prev item
+    if (!newItem) {
+      newItem = ITEMS[ITEMS.length - 1];
+    }
+    updatePopup(newItem);
+  }
+
+  function nextItem() {
+    let newItem = CURR_ITEM.nextElementSibling;
+    // Go to start if no next item
+    if (!newItem) {
+      newItem = ITEMS[0];
+    }
+    updatePopup(newItem);
+  }
+
+  // Carousel key listener
+  document.addEventListener("keydown", function(event) {
+    const key = event.key;
+
+    switch (event.key) {
+      case "ArrowLeft":
+        prevItem();
+        break;
+      case "ArrowRight":
+        nextItem();
+        break;
+    }
+  });
+
   // Close popup
+  const invalidTarget = document.getElementById("arrows");
   document.getElementById("work-popup").addEventListener("click", function() {
-    this.classList.toggle("active");
+    let isClickInside = invalidTarget.contains(event.target);
+
+    if (!isClickInside) {
+      //the click was outside the specifiedElement, do something
+      this.classList.toggle("active");
+    }
   });
 </script>

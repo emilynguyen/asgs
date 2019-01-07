@@ -50,6 +50,9 @@ $gutter: 5px;
 }
 
 #work {
+  ul {
+    list-style: none;
+  }
   .text {
     padding: 4rem;
   }
@@ -60,6 +63,20 @@ $gutter: 5px;
     text-transform: lowercase;
     color: #fff;
     margin: 0;
+  }
+  #arrows {
+    margin-top: 2rem;
+    color: #fff;
+    font-size: 4rem;
+    user-select: none;
+    span {
+      margin: 1rem;
+      opacity: 0.2;
+      transition: opacity 0.3s;
+      @include hover {
+        opacity: 1;
+      }
+    }
   }
 }
 
@@ -90,6 +107,7 @@ $gutter: 5px;
   }
   .title {
     font-size: 130%;
+    line-height: 130%;
   }
   .text,
   .title {
@@ -127,8 +145,6 @@ $gutter: 5px;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(170, 190, 43, 0.9);
   background-color: rgba(1, 52, 69, 0.95);
   height: 100%;
   width: 100%;

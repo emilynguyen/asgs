@@ -84,12 +84,14 @@
   <div id="work-popup">
     <div id="work-popup-wrapper">
       <div id="work-popup-container">
-        <img
-          src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/47572781_2097568586931495_165241367700701184_o.jpg?_nc_cat=110&_nc_ht=scontent-lax3-1.xx&oh=3c6b21b1280d45696962553c1558baea&oe=5CC2EB76"
-        />
+        <img src="" alt="" />
         <div class="text">
-          <h3 class="title">Bear Garden</h3>
-          <p class="description">Poster Design</p>
+          <h3 class="title"></h3>
+          <p class="description"></p>
+          <p id="arrows">
+            <span onclick="prevItem()"><</span
+            ><span onclick="nextItem()">></span>
+          </p>
         </div>
       </div>
     </div>
@@ -97,10 +99,10 @@
   <div class="inner-container">
     <h1>Work</h1>
 
-    <div id="work-container">
+    <ul id="work-container">
       <div class="grid-sizer"></div>
       
-      <div class="grid-item">
+      <li class="grid-item">
         <div class="grid-item-overlay">
           <div class="text">
             <h3 class="title">Bear Garden</h3>
@@ -108,9 +110,9 @@
           </div>
         </div>
         <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/47572781_2097568586931495_165241367700701184_o.jpg?_nc_cat=110&_nc_ht=scontent-lax3-1.xx&oh=3c6b21b1280d45696962553c1558baea&oe=5CC2EB76" alt="Bear Garden" />
-      </div>
+      </li>
       
-      <div class="grid-item">
+      <li class="grid-item">
         <div class="grid-item-overlay">
           <div class="text">
             <h3 class="title">UCSD Triton Fest</h3>
@@ -118,9 +120,9 @@
           </div>
         </div>
         <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/47274949_10156916339423767_6359435741633708032_o.png?_nc_cat=105&_nc_ht=scontent-lax3-1.xx&oh=a071d5212fff4b0068c7884527a08cb8&oe=5CD3E0CC" alt="UCSD Triton Fest" />
-      </div>
+      </li>
       
-      <div class="grid-item">
+      <li class="grid-item">
         <div class="grid-item-overlay">
           <div class="text">
             <h3 class="title">Congratulations Class of 2018</h3>
@@ -128,9 +130,9 @@
           </div>
         </div>
         <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/35228536_10156473526653767_1118838044305129472_o.png?_nc_cat=104&_nc_ht=scontent-lax3-1.xx&oh=d5de9abecaa0ee4d5f8192d9543f7542&oe=5CBEEA08" alt="Congratulations Class of 2018" />
-      </div>
+      </li>
       
-      <div class="grid-item">
+      <li class="grid-item">
         <div class="grid-item-overlay">
           <div class="text">
             <h3 class="title">UCSD Triton Fest</h3>
@@ -138,9 +140,9 @@
           </div>
         </div>
         <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/46921957_10156901165803767_7514849439668764672_o.jpg?_nc_cat=103&_nc_ht=scontent-lax3-1.xx&oh=12e5b2b391ee14b4da596c30f2023296&oe=5CD0ACF5" alt="UCSD Triton Fest" />
-      </div>
+      </li>
       
-      <div class="grid-item">
+      <li class="grid-item">
         <div class="grid-item-overlay">
           <div class="text">
             <h3 class="title">Arts & Humanities Mixer</h3>
@@ -148,9 +150,9 @@
           </div>
         </div>
         <img src="https://pro2-bar-s3-cdn-cf3.myportfolio.com/351d5f89b034ad6d946a9ae4e1e303ac/ee6730b1-de51-4f34-a7dd-8310e4c07ea3.png?h=fcfb1b30e5ee05b94e612547cf9d605e" alt="Arts & Humanities Mixer" />
-      </div>
+      </li>
       
-      <div class="grid-item">
+      <li class="grid-item">
         <div class="grid-item-overlay">
           <div class="text">
             <h3 class="title">Bear Garden</h3>
@@ -158,9 +160,9 @@
           </div>
         </div>
         <img src="https://pro2-bar-s3-cdn-cf3.myportfolio.com/351d5f89b034ad6d946a9ae4e1e303ac/ea76d649-109c-4a2b-90db-9baaff5a0b06_rw_3840.jpg?h=78bd947d167320426ad6a6bd9df46531" alt="Bear Garden" />
-      </div>
+      </li>
       
-      <div class="grid-item">
+      <li class="grid-item">
         <div class="grid-item-overlay">
           <div class="text">
             <h3 class="title">Bear Garden — Senior Send Off</h3>
@@ -168,9 +170,9 @@
           </div>
         </div>
         <img src="https://pro2-bar-s3-cdn-cf3.myportfolio.com/351d5f89b034ad6d946a9ae4e1e303ac/4af3c0bf-5058-460c-b966-0e133f40ce48_rw_3840.jpg?h=9e66802103dbe74ed659d518eada54c8" alt="Bear Garden — Senior Send Off" />
-      </div>
+      </li>
       
-    </div>
+    </ul>
   </div>
 </div>
 
@@ -197,16 +199,21 @@
 </script>
 
 <script>
-  let items = document.getElementsByClassName("grid-item");
+  const ITEMS = document.getElementsByClassName("grid-item");
+  let CURR_ITEM = null;
+
   let i;
-  for (i = 0; i < items.length; i++) {
-    items[i].addEventListener("click", function() {
+  for (i = 0; i < ITEMS.length; i++) {
+    ITEMS[i].addEventListener("click", function() {
       openPopup(this);
     });
   }
 
   // Update popup info
   function updatePopup(item) {
+    console.log(item);
+    CURR_ITEM = item;
+
     // Get info of clicked on item
     const img = item.querySelector("img").src;
     const title = item.querySelector(".title").innerHTML;
@@ -215,6 +222,7 @@
     // Pass info to popup
     const popup = document.getElementById("work-popup");
     popup.querySelector("img").src = img;
+    popup.querySelector("img").alt = title;
     popup.querySelector(".title").innerHTML = title;
     popup.querySelector(".description").innerHTML = description;
   }
@@ -224,12 +232,53 @@
     updatePopup(item);
     const popup = document.getElementById("work-popup");
     popup.classList.toggle("active");
-    console.log("open");
   }
 
+  function prevItem() {
+    let newItem = CURR_ITEM.previousElementSibling;
+    // Skip if .grid-sizer
+    if (newItem.classList.contains("grid-sizer")) {
+      newItem = newItem.previousElementSibling;
+    }
+    // Go to end if no prev item
+    if (!newItem) {
+      newItem = ITEMS[ITEMS.length - 1];
+    }
+    updatePopup(newItem);
+  }
+
+  function nextItem() {
+    let newItem = CURR_ITEM.nextElementSibling;
+    // Go to start if no next item
+    if (!newItem) {
+      newItem = ITEMS[0];
+    }
+    updatePopup(newItem);
+  }
+
+  // Carousel key listener
+  document.addEventListener("keydown", function(event) {
+    const key = event.key;
+
+    switch (event.key) {
+      case "ArrowLeft":
+        prevItem();
+        break;
+      case "ArrowRight":
+        nextItem();
+        break;
+    }
+  });
+
   // Close popup
+  const invalidTarget = document.getElementById("arrows");
   document.getElementById("work-popup").addEventListener("click", function() {
-    this.classList.toggle("active");
+    let isClickInside = invalidTarget.contains(event.target);
+
+    if (!isClickInside) {
+      //the click was outside the specifiedElement, do something
+      this.classList.toggle("active");
+    }
   });
 </script>
 </article>
