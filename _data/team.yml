@@ -10,16 +10,16 @@
   position: Senior Designer
   bio: An alumnus of Muir College Class of 2000, Alfredo graduated with a degree in Interdisciplinary Computing in the Arts Major. His design experience extends to even before his college days, and he wakes every morning eager to apply all of his skills and expertise to ASGS projects. Currently, he enjoys working with the Center for Student Involvement, and can't wait to add his creative magic to the program. He makes mountains out of molehills, puts the "ooh " in taboo, and challenges you to question "Is this guy serious, OR NAH? " When the sun sets, this hip hop dancer turned country line dancing king takes to the stage. We're all certain he's stumbled across the Fountain of Youth, but he won't tell.
 
+- name: Emily Heston
+  img: emilyh.jpg
+  link: http://www.emilyheston.com/
+  position: Graphic Artist
+
 - name: Angela Nguyen
   img: angela.jpg
   link: https://angelanguyen.me/
   position: Graphic Artist
   bio: An avid dog lover and former track star, Angela is a 4th year Sixth College student studying Human Biology. The words "cute, small, and sass" come to mind when describing this exuberant, young designer. In her spare time, she can be found cuddling with her dog, watching re-runs of the X-Files on Netflix, and searching for the perfect watermelon. Having established a solid background in graphic design during her high school years, Angela has developed an exceptional ability to free-hand recognizably adorable graphics. With her commitment to creativity and her bold determination to color outside the lines, this tiny designer with a larger-than-life imagination is the perfect addition to the ASGS dream team.
-
-- name: Pusheen
-  img: pusheen.jpg
-  position: Mascot
-  bio: A recent addition since ASGS/Triton Outfitters Christmas Potluck of 2015, Pusheen is the vigilant watch-cat of the office. You can find her in her favorite spot perched high above Thao's desk. Don't be fooled by her adorable pink bow though, because she will protect her family (and her donut) tooth and nail!
 
 - name: Noah Estep
   img: noah.jpg
@@ -28,11 +28,6 @@
 
 - name: Leo Cooperband
   img: leo.jpg
-  position: Graphic Artist
-
-- name: Emily Heston
-  img: emilyh.jpg
-  link: http://www.emilyheston.com/
   position: Graphic Artist
 
 - name: Amy Ting
@@ -48,3 +43,8 @@
   img: emily.jpg
   link: http://emilynguyen.co
   position: Webmaster
+
+- name: Pusheen
+  img: pusheen.jpg
+  position: Mascot
+  bio: A recent addition since ASGS/Triton Outfitters Christmas Potluck of 2015, Pusheen is the vigilant watch-cat of the office. You can find her in her favorite spot perched high above Thao's desk. Don't be fooled by her adorable pink bow though, because she will protect her family (and her donut) tooth and nail!
