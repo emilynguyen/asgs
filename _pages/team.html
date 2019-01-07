@@ -8,16 +8,47 @@ order: 4
 <div id="team" class="outer-container block">
   <div class="inner-container">
     <h1>Design Team</h1>
+    <p>
+      Get a quick glimpse of the characters in the A.S. Graphic Studio from the
+      page. Then step into the studio to meet us in person. Rumor around campus
+      is that we have a stocked candy dish and free cut-outs.
+    </p>
     <div id="team-container">
       {% for member in site.data.team %}
       <div class="member">
         <img src="/assets/images/team/{{ member.img }}" alt="" />
         <div class="text">
-          <h2>{{ member.name }}</h2>
-          <h3>{{ member.position }}</h3>
+          <h3>{{ member.name }}</h3>
+          <h4>{{ member.position }}</h4>
           <p class="small-text big-bio">{{ member.bio }}</p>
         </div>
         <p class="small-text small-bio">{{ member.bio }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div id="alumni" class="outer-container block">
+  <div class="inner-container">
+    <h2>Hall of Fame</h2>
+    <p>
+      Congratulations to our ASGS graduates. You will always be VIP members of
+      the studio. We wish you the best of luck in your next adventures.<br /><br />
+    </p>
+    <div id="alumni-container">
+      {% for alumnus in site.data.alumni %}
+      <div class="alumnus">
+        {% if alumnus.link %}
+        <a href="{{ alumnus.link }}" target="_blank"
+          >{% endif %}<img
+            src="/assets/images/team/blank.png"
+            alt="{{ alumnus.name }}"
+          />{% if alumnus.link %}</a
+        >{% endif %}
+        <h3>{{ alumnus.name }}</h3>
+        <h4>{{ alumnus.position }}</h4>
+        <p>{{ alumnus.date }}</p>
       </div>
       {% endfor %}
     </div>
