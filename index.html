@@ -50,7 +50,24 @@ order: 1
 </div>
 
 <script>
-  var confettiSettings = {
+  let confettiSettings;
+  let WIDTH = window.innerWidth;
+  let MOBILE;
+
+  mobileConfettiSettings = {
+    target: "confetti-canvas",
+    max: "100",
+    size: "1.5",
+    animate: true,
+    props: ["square"],
+    colors: [[171, 191, 42], [231, 113, 87], [7, 175, 142]],
+    clock: "3",
+    rotate: false,
+    width: "600",
+    height: "400"
+  };
+
+  desktopConfettiSettings = {
     target: "confetti-canvas",
     max: "100",
     size: "3",
@@ -62,6 +79,31 @@ order: 1
     width: "1800",
     height: "500"
   };
-  var confetti = new ConfettiGenerator(confettiSettings);
-  confetti.render();
+
+  if (WIDTH < 600) {
+    MOBILE = true;
+    let confetti = new ConfettiGenerator(mobileConfettiSettings);
+    confetti.render();
+  } else {
+    MOBILE = false;
+    let confetti = new ConfettiGenerator(desktopConfettiSettings);
+    confetti.render();
+  }
+
+  window.addEventListener("resize", function() {
+    const width = window.innerWidth;
+    if (MOBILE) {
+      if (width >= 600) {
+        MOBILE = false;
+        let confetti = new ConfettiGenerator(desktopConfettiSettings);
+        confetti.render();
+      }
+    } else {
+      if (width < 600) {
+        MOBILE = true;
+        let confetti = new ConfettiGenerator(mobileConfettiSettings);
+        confetti.render();
+      }
+    }
+  });
 </script>
