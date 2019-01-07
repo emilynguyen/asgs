@@ -51,8 +51,10 @@ p {
 }
 
 .small-text {
-  font-size: 1.4rem;
-  line-height: 2.1rem;
+  @include xs-up {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+  }
 }
 
 a {

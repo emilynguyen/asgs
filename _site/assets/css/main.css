@@ -147,9 +147,10 @@ h3 {
 p {
   font-size: 1.6rem; }
 
-.small-text {
-  font-size: 1.4rem;
-  line-height: 2.1rem; }
+@media (min-width: 480px) {
+  .small-text {
+    font-size: 1.4rem;
+    line-height: 2.1rem; } }
 
 a {
   color: inherit;
