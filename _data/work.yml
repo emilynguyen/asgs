@@ -3,12 +3,17 @@
   description: Facebook Event Banner
 
 - title: UCSD Triton Fest
+  hide: true
   img: triton-fest-profile.png
   description: Profile Image
 
 - title: UCSD Triton Fest
   img: triton-fest-banner.jpg
   description: Facebook Banner
+
+- title: Sun God Festival 2018
+  img: sun-god-2018.png
+  description: Web Design
 
 - title: Arts & Humanities Mixer
   img: arts-and-humanities.png
