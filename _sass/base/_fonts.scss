@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Neuzeit Grotesk";
+  src: url("/assets/fonts/NeuzeitGro-Bol.eot");
+  src: url("/assets/fonts/NeuzeitGro-Bol.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/NeuzeitGro-Bol.woff2") format("woff2"),
+    url("/assets/fonts/NeuzeitGro-Bol.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neuzeit Grotesk";
+  src: url("/assets/fonts/NeuzeitGro-Reg.eot");
+  src: url("/assets/fonts/NeuzeitGro-Reg.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/NeuzeitGro-Reg.woff2") format("woff2"),
+    url("/assets/fonts/NeuzeitGro-Reg.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

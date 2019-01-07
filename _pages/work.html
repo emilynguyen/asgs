@@ -6,5 +6,94 @@ order: 2
 ---
 
 <div id="work" class="outer-container block">
-  <div class="inner-container"><h1>Work</h1></div>
+  <div id="work-popup">
+    <div id="work-popup-wrapper">
+      <div id="work-popup-container">
+        <img
+          src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/47572781_2097568586931495_165241367700701184_o.jpg?_nc_cat=110&_nc_ht=scontent-lax3-1.xx&oh=3c6b21b1280d45696962553c1558baea&oe=5CC2EB76"
+        />
+        <div class="text">
+          <h3 class="title">Bear Garden</h3>
+          <p class="description">Poster Design</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="inner-container">
+    <h1>Work</h1>
+
+    <div id="work-container">
+      <div class="grid-sizer"></div>
+      {% for item in site.data.work %}
+      <div class="grid-item">
+        <div class="grid-item-overlay">
+          <div class="text">
+            <h3 class="title">{{ item.title }}</h3>
+            <p class="description small-text">{{ item.description }}</p>
+          </div>
+        </div>
+        <img src="{{ item.img }}" alt="{{ item.title }}" />
+      </div>
+      {%endfor%}
+    </div>
+  </div>
 </div>
+
+<script src="/assets/scripts/masonry.pkgd.min.js"></script>
+<script src="/assets/scripts/imagesloaded.pkgd.min.js"></script>
+
+<script>
+  // external js: masonry.pkgd.js, imagesloaded.pkgd.js
+
+  // init Masonry
+  var grid = document.getElementById("work-container");
+
+  var msnry = new Masonry(grid, {
+    itemSelector: ".grid-item",
+    columnWidth: ".grid-sizer",
+    percentPosition: true,
+    gutter: 5
+  });
+
+  imagesLoaded(grid).on("progress", function() {
+    // layout Masonry after each image loads
+    msnry.layout();
+  });
+</script>
+
+<script>
+  let items = document.getElementsByClassName("grid-item");
+  let i;
+  for (i = 0; i < items.length; i++) {
+    items[i].addEventListener("click", function() {
+      openPopup(this);
+    });
+  }
+
+  // Update popup info
+  function updatePopup(item) {
+    // Get info of clicked on item
+    const img = item.querySelector("img").src;
+    const title = item.querySelector(".title").innerHTML;
+    const description = item.querySelector(".description").innerHTML;
+
+    // Pass info to popup
+    const popup = document.getElementById("work-popup");
+    popup.querySelector("img").src = img;
+    popup.querySelector(".title").innerHTML = title;
+    popup.querySelector(".description").innerHTML = description;
+  }
+
+  // Open popup
+  function openPopup(item) {
+    updatePopup(item);
+    const popup = document.getElementById("work-popup");
+    popup.classList.toggle("active");
+    console.log("open");
+  }
+
+  // Close popup
+  document.getElementById("work-popup").addEventListener("click", function() {
+    this.classList.toggle("active");
+  });
+</script>
