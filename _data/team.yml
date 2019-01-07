@@ -1,15 +1,18 @@
 - name: Melissa Ewart
   img: melissa.jpg
+  link: https://www.linkedin.com/in/melissaewart/
   position: Manager
   bio: A Revelle College alumna with a BA in Visual Arts, Interdisciplinary Computing and the Arts, Melissa boasts 11 years of professional design and public relations experience. After working for several event planning companies, corporate groups, non-profit organizations, and even personal clients, she eventually founded the AS Graphic Studio. She doesn't have a favorite project and loves them all equally as a mother would her children. Outside of the office, she enjoys crafty projects with her daughter, hosting Pinterest-worthy potlucks, and going to the beach. She's also an avid Diet Pepsi drinker and, despite already having a daughter, is sometimes the unofficial mother of studio staff members. We love her!
 
 - name: Alfredo Vilano
   img: alfredo.jpg
+  link: https://www.linkedin.com/in/alfredo-h-vilano-jr-a99796/
   position: Senior Designer
   bio: An alumnus of Muir College Class of 2000, Alfredo graduated with a degree in Interdisciplinary Computing in the Arts Major. His design experience extends to even before his college days, and he wakes every morning eager to apply all of his skills and expertise to ASGS projects. Currently, he enjoys working with the Center for Student Involvement, and can't wait to add his creative magic to the program. He makes mountains out of molehills, puts the "ooh " in taboo, and challenges you to question "Is this guy serious, OR NAH? " When the sun sets, this hip hop dancer turned country line dancing king takes to the stage. We're all certain he's stumbled across the Fountain of Youth, but he won't tell.
 
 - name: Angela Nguyen
   img: angela.jpg
+  link: https://angelanguyen.me/
   position: Graphic Artist
   bio: An avid dog lover and former track star, Angela is a 4th year Sixth College student studying Human Biology. The words "cute, small, and sass" come to mind when describing this exuberant, young designer. In her spare time, she can be found cuddling with her dog, watching re-runs of the X-Files on Netflix, and searching for the perfect watermelon. Having established a solid background in graphic design during her high school years, Angela has developed an exceptional ability to free-hand recognizably adorable graphics. With her commitment to creativity and her bold determination to color outside the lines, this tiny designer with a larger-than-life imagination is the perfect addition to the ASGS dream team.
 
@@ -20,6 +23,7 @@
 
 - name: Noah Estep
   img: noah.jpg
+  link: http://www.noahestep.com/
   position: Graphic Artist
 
 - name: Leo Cooperband
@@ -28,8 +32,19 @@
 
 - name: Emily Heston
   img: emilyh.jpg
+  link: http://www.emilyheston.com/
   position: Graphic Artist
 
 - name: Amy Ting
   img: amy.jpg
+  link: https://ampers.at/
   position: Graphic Artist
+
+- name: Tim Lee
+  img: tim.jpg
+  position: Graphic Artist
+
+- name: Emily Nguyen
+  img: emily.jpg
+  link: http://emilynguyen.co
+  position: Webmaster

@@ -16,7 +16,14 @@ order: 4
     <div id="team-container">
       {% for member in site.data.team %}
       <div class="member">
-        <img src="/assets/images/team/{{ member.img }}" alt="" />
+        {% if member.link %}
+        <a href="{{ member.link }}" target="_blank"
+          >{% endif %}
+          <img
+            src="/assets/images/team/{{ member.img }}"
+            alt="{{ member.name }}"
+          />{% if member.link %}</a
+        >{% endif %}
         <div class="text">
           <h3>{{ member.name }}</h3>
           <h4>{{ member.position }}</h4>
@@ -42,7 +49,17 @@ order: 4
         {% if alumnus.link %}
         <a href="{{ alumnus.link }}" target="_blank"
           >{% endif %}<img
-            src="/assets/images/team/blank.png"
+            {%
+            if
+            alumnus.img
+            %}
+            src="/assets/images/alumni/{{ alumnus.img }}"
+            {%
+            else
+            %}src="/assets/images/team/blank.png"
+            {%
+            endif
+            %}
             alt="{{ alumnus.name }}"
           />{% if alumnus.link %}</a
         >{% endif %}

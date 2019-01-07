@@ -1,37 +1,45 @@
 - name: Bryant Lim
+  img: bryant.jpeg
   link: https://www.linkedin.com/in/bryantwlim
   position: Public Relations Assistant
   date: 2012–2015
-  current: Assistant Accountant Executive | BBDO NY, NYC
 
 - name: Tanya Zhang
+  img: tanya.jpeg
   link: http://www.tanyazdesigns.com/
   position: Graphic Artist
   date: 2011–2015
-  current: Associate Art Director | TBWA\CHIAT\DAY NY, NYC
+
+- name: Jenalyn Inong
+  img: jenalyn.jpeg
+  link: https://its12am.com/
+  position: Graphic Artist
+  date: 2009–2014
 
 - name: Ana Sanchez
   position: Public Relations Assistant
   date: 2012–2013
-  current: Recruiter | Palo Alto Corporate Services, Palo Alto
 
 - name: Yip Ho
+  link: https://www.linkedin.com/in/yip-ho-6a881076/
   position: Graphic Artist
   date: 2011–2013
 
-- name: Jenalyn Inong
-  position: Graphic Artist
-  date: 2009–2013
-
 - name: Tracy Hua
+  img: tracy.jpeg
+  link: https://www.linkedin.com/in/trhua/
   position: Public Relations Assistant
   date: 2010–2011
 
 - name: Nathan Romero
+  img: nathan.png
+  link: http://nathanromero.com/
   position: Graphic Artist
   date: 2009–2011
 
 - name: Irvin Fong
+  img: irvin.jpeg
+  link: http://irvinfong.com/
   position: Graphic Artist
   date: 2009–2011
 
@@ -40,14 +48,20 @@
   date: 2009–2010
 
 - name: Brian Ng
+  link: https://www.linkedin.com/in/brianjng/
+  img: brian.jpeg
   position: Graphic Artist
   date: 2009–2010
 
 - name: Nicole Elias
+  img: nicole.jpeg
+  link: https://www.linkedin.com/in/nicoleeliaspr/
   position: Graphic Studio Manager — Interim, Public Relations Assistant
   date: 2008–2010
 
 - name: Jordan Ma
+  img: jordan.jpeg
+  link: http://jordanma.com/
   position: Graphic Artist
   date: 2008–2009
 
