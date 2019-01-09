@@ -624,7 +624,7 @@ footer {
   #team-container h4 {
     margin-bottom: 1rem; }
   #team-container img {
-    height: 8rem;
+    height: 10rem;
     margin-right: 1.5rem;
     -webkit-transition: -webkit-transform 0.3s;
     transition: -webkit-transform 0.3s;
@@ -652,10 +652,6 @@ footer {
 #alumni-container {
   margin-top: 2rem;
   text-align: center;
-  /*
-  display: grid;
-  grid-gap: 4rem;
-  grid-template-columns: 1fr 1fr 1fr; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
