@@ -42,7 +42,7 @@ header {
   }
   a {
     font-weight: bold;
-    color: $orange;
+    color: $accent;
     border: none;
     text-transform: lowercase;
     text-decoration: none;
@@ -54,7 +54,7 @@ header {
     }
     &.active {
       color: #fff;
-      background-color: $orange;
+      background-color: $accent;
     }
     @include md-up {
       padding: 1.4rem 2rem 0.8rem;
