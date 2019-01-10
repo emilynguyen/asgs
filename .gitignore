@@ -2,3 +2,4 @@
 .jekyll-metadata
 /makeart
 _site/makeart
+.DS_Store
