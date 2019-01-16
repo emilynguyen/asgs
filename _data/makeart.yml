@@ -1,0 +1,18 @@
+meta:
+  title: Make Art
+  description: "Save the Dates for Make Art: AS Graphic Studio's 10 Year Celebration. Make Art is a hands-on, interactive celebration of art, crafts, music, and food."
+  keywords: AS Graphic Studio, Triton Fest, Make Art, UCSD
+
+nav:
+  - title: Home
+    anchor: home
+  - title: Art
+    anchor: art
+  - title: Maker's Row
+    anchor: makersrow
+  - title: Entertainment
+    anchor: entertainment
+  - title: Film
+    anchor: film
+  - title: Sponsors
+    anchor: sponsors

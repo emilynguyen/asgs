@@ -1,0 +1,22 @@
+---
+---
+
+@charset 'UTF-8';
+
+// Configuration + helpers
+@import "abstracts/variables", "makeart/variables", "abstracts/mixins";
+
+// Vendor
+@import "vendor/reset";
+
+// Base
+@import "makeart/base";
+
+// Typography
+@import "makeart/typography";
+
+// Layouts + components
+@import "makeart/layout";
+
+// Page-specific styles
+@import "makeart/home";

@@ -1,0 +1,17 @@
+.block {
+  min-height: calc(100vh - #{$nav-height});
+  &-green {
+    background-color: $green;
+  }
+  padding: 8rem 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 8vw;
+  box-sizing: border-box;
+  max-width: 1400px;
+  height: 100%;
+}

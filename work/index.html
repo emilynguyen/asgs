@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Work
+description: Get a glimpse of what AS Graphic Studio has been working on!
 permalink: /work/
 order: 2
 ---
@@ -129,6 +130,9 @@ order: 2
         break;
       case "ArrowRight":
         nextItem();
+        break;
+      case "Escape":
+        document.getElementById("work-popup").classList.remove("active");
         break;
     }
   });
