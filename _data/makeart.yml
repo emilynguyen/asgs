@@ -4,15 +4,69 @@ meta:
   keywords: AS Graphic Studio, Triton Fest, Make Art, UCSD
 
 nav:
-  - title: Home
-    anchor: home
+  - title: About
+    anchor: about
   - title: Art
     anchor: art
   - title: Maker's Row
     anchor: makersrow
-  - title: Entertainment
-    anchor: entertainment
   - title: Film
     anchor: film
-  - title: Sponsors
-    anchor: sponsors
+  - title: Entertainment
+    anchor: entertainment
+  # - title: Sponsors
+#    anchor: sponsors
+
+art:
+  - title: Welcome to the sweet suite
+    description: Enter the world of AS Graphic Studio, starting with a sweet treat.
+  - title: Dreaming of ten years of poster-bilities
+    description: Explore ASGS art and event posters from 2008 - 2018
+  - title: All buttoned up
+    description: Take a button, leave a button
+  - title: Completely unbearable
+    description: Enter the natural habitat of our beloved Bear Garden bears.
+  - title: Save the babies
+    description: Our detective needs your help to find our missing Sun God Babies. You have five minutes to solve the clues with your team. If you beat the clock, you will escape with a special edition Sun God Baby to be used this Spring 2019.
+  - title: Loungin’ around
+    description: Check out the history of Sun God and AS Graphic Studio and capture a photo opp with Fluffy.
+
+makersrow:
+  - title: Meet ASCE Bear
+    host: AS Concerts & Events
+  - title: Silent Disco
+    host: University Centers
+  - title: Origami
+    host: Origami Folders
+  - title: Health & Safety
+    host: Student Health Advocates
+  - title: Exquisite Corpse & Cut Paper Portraits
+    host: Lori Mitchell, April Mitchell
+  - title: Block Printmaking
+    host: UC San Diego Extension (open until 10 pm)
+  - title: Portraits & Hand Lettering
+    host: Uyen Tran
+  - title: Projection Mapping
+    host: ICAM Student Association
+  - title: Adwave
+  - title: Design Your Own Apparel
+    host: Triton Outfitters
+  - title: Photo Booth
+    host: KSDT Radio
+  - title: Video Storytelling
+    host: Triton Television
+  - title: Songs from Hairspray
+    host: Muir Musical
+  - title: Photography & Zine
+    host: SNAP
+  - title: Decorate Your Own Mug
+    host: The Zone (Located in PC Plaza, Open until 10 pm)
+  - title: KIND Bar
+    host: Free BBQ from Ranchwood BBQ
+
+entertainment:
+  - title: Viet Mai, ’03
+  - title: Jzov Stith-Gambles
+  - title: Muir Musical
+  - title: DVC
+  - title: DJ Shneaky

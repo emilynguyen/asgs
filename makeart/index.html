@@ -1,0 +1,157 @@
+---
+layout: makeart
+title: Make Art
+description: Make Art is AS Graphic Studio’s 10 year anniversary celebration! The event is an interactive celebration of arts, held in conjunction with Triton Fest.
+permalink: /makeart/
+---
+
+<nav>
+  <div class="container">
+    <div id="nav-container">
+      <a id="home-link" href="/makeart" style="line-height: 0">
+        <img
+          id="nav-logo"
+          src="/assets/images/makeart/makeart-logo.svg"
+          alt="Make Art"
+      /></a>
+      <ul>
+        {% for item in site.data.makeart.nav %}
+        <li>
+          <a href="#{{ item.anchor }}">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="block block-green">
+  <div class="container">
+    <div id="header-container">
+      <img
+        id="header-logo"
+        src="/assets/images/makeart/makeart-logo-white.svg"
+        alt="Make Art"
+      />
+    </div>
+    <img
+      id="mouse-icon"
+      src="/assets/images/makeart/mouse.svg"
+      alt="Scroll Down"
+    />
+  </div>
+</header>
+
+<div id="about" class="block">
+  <div class="container">
+    <div class="title">
+      <h1>A.S. Graphic Studio and Triton Fest Present: Make Art</h1>
+    </div>
+    <div class="text">
+      <div>
+        <p>
+          Make Art is AS Graphic Studio’s 10 year anniversary celebration! The
+          event is an interactive celebration of arts, held in conjunction with
+          Triton Fest! With six interactive room installations, film screening,
+          music, food, and art, Make Art invites you to join in on the
+          imagination and innovation that has grown Graphic Studio to what it is
+          today.
+          
+        </p>
+        <h2>Registration</h2>
+        <p>
+          Free for current UC San Diego undergraduate and graduate students with
+          student ID. Entry wristbands available at the Triton Fest Registration
+          tent on Library Walk beginning at 8:00 pm.
+        </p>
+      </div>
+      <div>
+        <h3>
+          Jan. 25, 2019<br />
+          <span class="font-weight-normal">
+              8 pm – Midnight<br>Library Walk</span
+          >
+          </h3>
+        <h3>
+          Jan. 26, 2019<br /><span class="font-weight-normal"
+            >1 – 3:30 pm<br>Library Walk<br>Art Installations (Only)</span
+          >
+        </h3>
+      </div>
+    </div> <!-- /#about -->
+    <div id="map">
+      <h2>Map</h2>
+      <img id="map-img" src="/assets/images/makeart/map.png" alt="Make Art map">
+    </div> <!-- /#map -->
+    <div id="registration">
+        
+    </div>
+  </div>
+</div>
+
+<div id="art" class="block block-gray">
+  <div class="container">
+    <h1>Art Installations</h1>
+    <p>Enter the world and imagination of the AS Graphic Studio:</p>
+    <div id="art-container">
+      {% for art in site.data.makeart.art %}
+        <div>
+          <h2>{{ art.title }}</h2>
+          <p>{{ art.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  </div>
+</div>
+
+<div id="makersrow" class="block">
+  <div class="container">
+    <h1>Maker's Row</h1>
+    {% for booth in site.data.makeart.makersrow %}
+      <h3>{{ booth.title }} <span class="font-weight-normal"><i>{{ booth.host }}</i></span></h3>
+    {% endfor %}
+  </div>
+</div>
+
+<div id="film" class="block block-gray">
+  <div class="container">
+    <h1>Film Screening</h1>
+    <div id="infinity">
+      <iframe src="https://www.youtube.com/embed/x8mdIB1WxHI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div>
+        <h2>Kusama: Infinity</h2>
+        <h3>Screening and Conversation with Director Heather Lenz</h3>
+        <p><b>Doors</b> 8:30 pm<br>
+          <b>Screening</b> 9:00 pm<br>
+        <b>Conversation</b> Heather Lenz (Director, Producer, Writer) with Amy Adler (Visual Arts Professor and Chair)<br>
+      <b>Location</b> Price Center Theatre, UC San Diego<br><br>
+          Presented by A.S. Graphic Studio & UCSD Triton Fest with support from Visual Arts | <a href="http://www.kusamamovie.com/" target="_blank">kusamamovie.com</a>
+        </p>
+      </div>
+    </div> <!-- /#infinity -->
+
+    <div id="kusama">
+      <p>Now the top-selling female artist in the world, Yayoi Kusama overcame impossible odds to bring her radical artistic vision to the world stage. For decades, her work pushed boundaries that often alienated her from both her peers and those in power in the art world. Kusama was an underdog with everything stacked against her: the trauma of growing up in Japan during World War II, life in a dysfunctional family that discouraged her creative ambitions, sexism and racism in the art establishment, mental illness in a culture where that was particularly shameful and even continuing to pursue and be devoted to her art full time on the cusp of her 90s. In spite of it all, Kusama has endured and has created a legacy of artwork that spans the disciplines of painting, sculpture, installation art, performance art, poetry and literary fiction. After working as an artist for over six decades, people around the globe are experiencing her installation Infinity Mirrored Rooms in record numbers, as Kusama continues to create new work every day.
+        </p>
+    </div>
+    <br>
+    <h3>HEATHER LENZ – Director/Writer/Producer</h3>
+    <p>
+      Director, Writer, and Producer Heather Lenz is passionate about documentaries and biography films. She is drawn to stories about people with creative minds who have not walked the beaten path, such as artists, scientists, and environmentalists. She is also interested in strong female characters, subcultures, and social issues – particularly environmental issues and public health issues. Her first short documentary, about a bicycle inventor, <i>Back to Back</i>, was nominated for a student Academy Award and screened in film festivals worldwide. Lenz recently finished her first feature film, <i>KUSAMA: INFINITY</i>, about artist Yayoi Kusama’s obstacles overcoming sexism, racism, and mental illness on her path to becoming the top selling female artist in the world. The film premiered at Sundance in January of 2018 and was acquired by Magnolia who released it theatrically in the US on September 7, 2018. (The film also has world-wide distribution.) Lenz earned her MFA in Cinematic Arts from USC. She also has undergraduate degrees in Art History and Fine Arts and completed a certificate program in Permaculture (sustainable agriculture) at The Ecology Center.
+      </p>
+      <br>
+      <h3>Amy Adler</h3>
+      <p>Amy Adler is Professor and Chair of the Visual Arts Department at the University of California San Diego where she has been teaching since 2004. She graduated with a BFA from Cooper Union and received an MFA in Visual Art from UCLA and an MFA in Cinematic Arts from USC. As an artist and filmmaker, she has had one person shows at museums and galleries worldwide. Adler’s work is included in several permanent collections including The Broad Foundation, Los Angeles, The UCLA Hammer Museum, Los Angeles and The Museum of Contemporary Art, San Diego. To view her work please visit <a href="https://amyadler.com/" target="_blank">www.amyadler.com</a>
+      </p>
+  </div>
+</div>
+
+<div id="entertainment" class="block">
+  <div class="container">
+    <h1>Entertainment</h1>
+    {% for act in site.data.makeart.entertainment %}
+      <h2>{{ act.title }}</h2>
+    {% endfor %}
+  </div>
+</div>

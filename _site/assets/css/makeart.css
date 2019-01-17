@@ -47,10 +47,14 @@ table {
 
 .block {
   min-height: calc(100vh - 8rem);
-  padding: 8rem 0;
+  padding: 10rem 0;
   box-sizing: border-box; }
   .block-green {
     background-color: #babf11; }
+    .block-green h1 {
+      color: #fff; }
+  .block-gray {
+    background-color: #f8f8f8; }
 
 .container {
   margin-left: auto;
@@ -60,8 +64,33 @@ table {
   max-width: 1400px;
   height: 100%; }
 
+button {
+  background-color: #babf11;
+  color: #fefefe;
+  text-transform: lowercase;
+  white-space: nowrap;
+  font-size: 2rem;
+  line-height: 0;
+  padding: 2rem 2.5rem 2.5rem;
+  font-family: inherit;
+  font-weight: bold;
+  letter-spacing: inherit;
+  border: none;
+  margin: 1.5rem 0;
+  transition: 0.3s;
+  cursor: pointer; }
+  button:focus {
+    outline: 0; }
+  @media (hover: hover) {
+    button:hover {
+      background-color: rgba(255, 255, 255, 0);
+      color: #babf11;
+      box-shadow: inset 0rem 0rem 0 0.3rem #babf11; } }
+
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 body {
   font-family: "Century Gothic", "Helvetica", "Arial", sans-serif;
@@ -71,18 +100,28 @@ body {
   color: #4b4f54; }
 
 h1,
-h2 {
+h2,
+h3 {
   font-weight: bold;
   text-transform: lowercase; }
 
 h1 {
   font-size: 4rem;
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem;
+  line-height: 4.9rem;
+  color: #babf11; }
 
 h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  line-height: 3.9rem; }
+
+h3 {
   font-size: 2rem;
   line-height: 2.9rem;
-  margin-bottom: 4rem; }
+  margin-top: 0;
+  margin-bottom: 2rem; }
 
 a {
   color: inherit;
@@ -90,6 +129,25 @@ a {
 
 p {
   margin-bottom: 4rem; }
+
+.font-weight-normal {
+  font-weight: normal; }
+
+i {
+  font-style: italic; }
+
+b {
+  font-weight: bold; }
+
+a {
+  border-bottom: 1px solid #4b4f54;
+  transition: border 0.3s; }
+  @media (hover: hover) {
+    a:hover {
+      border-color: rgba(255, 255, 255, 0); } }
+
+hr {
+  border-top: 0.2rem solid #ddd; }
 
 nav {
   background-color: #fff;
@@ -100,17 +158,35 @@ nav {
   z-index: 9999;
   height: 8rem;
   text-transform: lowercase;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 1rem; }
+  @media (min-width: 840px) {
+    nav {
+      font-size: 100%; } }
   nav li {
     display: inline-block; }
     nav li:not(:last-child) {
-      margin-right: 4rem; }
+      margin-right: 1.5rem; }
+      @media (min-width: 840px) {
+        nav li:not(:last-child) {
+          margin-right: 4rem; } }
+  nav a {
+    border: none; }
 
 #nav-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%; }
+  @media (min-width: 840px) {
+    #nav-container {
+      justify-content: space-between; } }
+
+#home-link {
+  display: none; }
+  @media (min-width: 840px) {
+    #home-link {
+      display: inline-block; } }
 
 #nav-logo {
   height: 3.2rem; }
@@ -136,9 +212,10 @@ header {
   position: absolute;
   bottom: 4rem;
   opacity: 0.4;
-  height: 6rem;
+  height: 4rem;
   animation: bounce 0.5s alternate infinite;
-  user-select: none; }
+  user-select: none;
+  display: none; }
 
 @keyframes bounce {
   from {
@@ -147,3 +224,47 @@ header {
   to {
     -webkit-transform: translate3d(0, 0.5rem, 0);
     transform: translate3d(0, -0.5rem, 0); } }
+@media (min-width: 1024px) {
+  #about .title {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 6rem; } }
+#about .text {
+  font-weight: normal; }
+  @media (min-width: 840px) {
+    #about .text {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      grid-gap: 6rem; } }
+
+#map-img {
+  max-width: 100%; }
+
+#art-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 6rem; }
+  #art-container p {
+    margin-bottom: 0; }
+  #art-container h2 {
+    margin-bottom: 0.5rem; }
+  @media (min-width: 840px) {
+    #art-container {
+      grid-template-columns: 1fr 1fr; } }
+
+#infinity h2 {
+  margin-bottom: 0; }
+#infinity iframe {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 310px;
+  margin-bottom: 2rem; }
+#infinity b {
+  text-transform: lowercase; }
+@media (min-width: 840px) {
+  #infinity {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 6rem; }
+    #infinity iframe {
+      margin-bottom: 0; } }

@@ -8,19 +8,39 @@ nav {
   height: 8rem;
   text-transform: lowercase;
   font-weight: bold;
+  font-size: 1rem;
+  @include md-up {
+    font-size: 100%;
+  }
   li {
     display: inline-block;
     &:not(:last-child) {
-      margin-right: 4rem;
+      margin-right: 1.5rem;
+      @include md-up {
+        margin-right: 4rem;
+      }
     }
+  }
+  a {
+    border: none;
   }
 }
 
 #nav-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
+  @include md-up {
+    justify-content: space-between;
+  }
+}
+
+#home-link {
+  display: none;
+  @include md-up {
+    display: inline-block;
+  }
 }
 
 #nav-logo {
@@ -52,9 +72,10 @@ header {
   position: absolute;
   bottom: 4rem;
   opacity: 0.4;
-  height: 6rem;
+  height: 4rem;
   animation: bounce 0.5s alternate infinite;
   user-select: none;
+  display: none;
 }
 
 @keyframes bounce {
