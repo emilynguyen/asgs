@@ -1,12 +1,15 @@
 #confetti-container {
-  background-color: $blue;
   overflow: hidden;
   height: 25rem;
+  height: 40vw;
   width: 100%;
   position: relative;
-  @include sm-up {
-    height: 45rem;
-  }
+  max-height: 45rem;
+}
+
+#confetti-container,
+#confetti-canvas {
+  background-color: $green;
 }
 
 #confetti-text {
@@ -21,18 +24,11 @@
   line-height: 0;
   white-space: nowrap;
   top: 50%;
-  text-shadow: 0 0 4rem $blue;
+  //text-shadow: 0 0 4rem $green;
   font-size: 5vw;
-  @include sm-up {
-    font-size: 4vw;
-  }
-  @include xl-up {
+  @include lg-up {
     font-size: 5.1rem;
   }
-}
-
-#confetti-canvas {
-  background-color: $blue;
 }
 
 #news-container {

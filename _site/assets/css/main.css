@@ -119,7 +119,7 @@ body {
 h1 {
   font-size: 6rem;
   font-weight: bold;
-  color: #abbf2b;
+  color: #b7bf10;
   line-height: 6rem;
   margin: 2rem 0; }
   @media (min-width: 600px) {
@@ -131,7 +131,7 @@ h1 {
 h2 {
   font-size: 4rem;
   font-weight: bold;
-  color: #abbf2b;
+  color: #b7bf10;
   line-height: 4rem;
   margin: 2rem 0; }
   @media (min-width: 600px) {
@@ -154,7 +154,7 @@ h3 {
   margin: 2rem 0 1.4rem; }
 
 h4 {
-  color: #abbf2b;
+  color: #b7bf10;
   font-weight: bold; }
 
 p {
@@ -233,7 +233,7 @@ header {
     display: inline-block; }
   #nav a {
     font-weight: bold;
-    color: #abbf2b;
+    color: #b7bf10;
     border: none;
     text-transform: lowercase;
     text-decoration: none;
@@ -244,7 +244,7 @@ header {
       margin-right: 0.4rem; }
     #nav a.active {
       color: #fff;
-      background-color: #abbf2b; }
+      background-color: #b7bf10; }
     @media (min-width: 840px) {
       #nav a {
         padding: 1.4rem 2rem 0.8rem; }
@@ -265,7 +265,7 @@ footer {
   footer h3,
   footer h4 {
     font-weight: bold;
-    color: #abbf2b; }
+    color: #b7bf10; }
   footer p {
     margin-top: 1rem;
     color: #585858; }
@@ -292,14 +292,16 @@ footer {
         grid-column: auto; } }
 
 #confetti-container {
-  background-color: #16353f;
   overflow: hidden;
   height: 25rem;
+  height: 40vw;
   width: 100%;
-  position: relative; }
-  @media (min-width: 600px) {
-    #confetti-container {
-      height: 45rem; } }
+  position: relative;
+  max-height: 45rem; }
+
+#confetti-container,
+#confetti-canvas {
+  background-color: #b7bf10; }
 
 #confetti-text {
   user-select: none;
@@ -313,17 +315,10 @@ footer {
   line-height: 0;
   white-space: nowrap;
   top: 50%;
-  text-shadow: 0 0 4rem #16353f;
   font-size: 5vw; }
-  @media (min-width: 600px) {
-    #confetti-text {
-      font-size: 4vw; } }
-  @media (min-width: 1280px) {
+  @media (min-width: 1024px) {
     #confetti-text {
       font-size: 5.1rem; } }
-
-#confetti-canvas {
-  background-color: #16353f; }
 
 #news-container {
   display: grid;
@@ -431,7 +426,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(22, 53, 63, 0.97);
+  background-color: rgba(40, 40, 40, 0.97);
   z-index: 9999;
   transition: visibility 0.4s, opacity 0.4s; }
   #work-popup img {
@@ -474,7 +469,7 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(22, 53, 63, 0.97);
+  background-color: rgba(40, 40, 40, 0.97);
   height: 100%;
   width: 100%;
   display: flex;
