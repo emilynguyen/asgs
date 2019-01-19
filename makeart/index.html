@@ -5,7 +5,7 @@ description: Make Art is AS Graphic Studio’s 10 year anniversary celebration! 
 permalink: /makeart/
 ---
 
-<nav>
+<nav id="nav">
   <div class="container">
     <div id="nav-container">
       <a id="home-link" href="/makeart" style="line-height: 0">
@@ -14,10 +14,10 @@ permalink: /makeart/
           src="/assets/images/makeart/makeart-logo.svg"
           alt="Make Art"
       /></a>
-      <ul>
+      <ul id="nav-ul">
         {% for item in site.data.makeart.nav %}
         <li>
-          <a href="#{{ item.anchor }}">{{ item.title }}</a>
+          <a href="#{{ item.anchor }}" onclick="scrollToAnchor({{ item.anchor }})">{{ item.title }}</a>
         </li>
         {% endfor %}
       </ul>
@@ -28,11 +28,14 @@ permalink: /makeart/
 <header class="block block-green">
   <div class="container">
     <div id="header-container">
+      <!--
       <img
         id="header-logo"
         src="/assets/images/makeart/makeart-logo-white.svg"
         alt="Make Art"
       />
+      -->
+      {% include lottie.html %}
     </div>
     <img
       id="mouse-icon"
@@ -58,7 +61,7 @@ permalink: /makeart/
           today.
           
         </p>
-        <h2>Registration</h2>
+        <h2>Registration<img class="h2-icon" src="/assets/images/makeart/registration.png" alt=""/></h2>
         <p>
           Free for current UC San Diego undergraduate and graduate students with
           student ID. Entry wristbands available at the Triton Fest Registration
@@ -77,6 +80,7 @@ permalink: /makeart/
             >1 – 3:30 pm<br>Library Walk<br>Art Installations (Only)</span
           >
         </h3>
+        <button onclick="location.href='https://www.facebook.com/events/786369338371902/'" type="button">RSVP</button>
       </div>
     </div> <!-- /#about -->
     <div id="map">
@@ -89,9 +93,9 @@ permalink: /makeart/
   </div>
 </div>
 
-<div id="art" class="block block-gray">
+<div id="art" class="block block-dark">
   <div class="container">
-    <h1>Art Installations</h1>
+    <h1>Art Installations<img class="h1-icon" src="/assets/images/makeart/art.png" alt=""/></h1>
     <p>Enter the world and imagination of the AS Graphic Studio:</p>
     <div id="art-container">
       {% for art in site.data.makeart.art %}
@@ -105,18 +109,20 @@ permalink: /makeart/
   </div>
 </div>
 
-<div id="makersrow" class="block">
+<div id="makersrow" class="block block-gray">
   <div class="container">
-    <h1>Maker's Row</h1>
+    <h1>Maker's Row<img class="h1-icon" src="/assets/images/makeart/makersrow.png" alt=""/></h1>
     {% for booth in site.data.makeart.makersrow %}
       <h3>{{ booth.title }} <span class="font-weight-normal"><i>{{ booth.host }}</i></span></h3>
     {% endfor %}
   </div>
 </div>
 
-<div id="film" class="block block-gray">
+
+<div id="film" class="block ">
+  <canvas id="film-canvas"></canvas>
   <div class="container">
-    <h1>Film Screening</h1>
+    <h1>Film Screening<img class="h1-icon" src="/assets/images/makeart/film.png" alt=""/></h1>
     <div id="infinity">
       <iframe src="https://www.youtube.com/embed/x8mdIB1WxHI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <div>
@@ -138,20 +144,146 @@ permalink: /makeart/
     <br>
     <h3>HEATHER LENZ – Director/Writer/Producer</h3>
     <p>
+      <img src="/assets/images/makeart/lenz.jpeg" alt="" class="profile">
       Director, Writer, and Producer Heather Lenz is passionate about documentaries and biography films. She is drawn to stories about people with creative minds who have not walked the beaten path, such as artists, scientists, and environmentalists. She is also interested in strong female characters, subcultures, and social issues – particularly environmental issues and public health issues. Her first short documentary, about a bicycle inventor, <i>Back to Back</i>, was nominated for a student Academy Award and screened in film festivals worldwide. Lenz recently finished her first feature film, <i>KUSAMA: INFINITY</i>, about artist Yayoi Kusama’s obstacles overcoming sexism, racism, and mental illness on her path to becoming the top selling female artist in the world. The film premiered at Sundance in January of 2018 and was acquired by Magnolia who released it theatrically in the US on September 7, 2018. (The film also has world-wide distribution.) Lenz earned her MFA in Cinematic Arts from USC. She also has undergraduate degrees in Art History and Fine Arts and completed a certificate program in Permaculture (sustainable agriculture) at The Ecology Center.
       </p>
       <br>
       <h3>Amy Adler</h3>
-      <p>Amy Adler is Professor and Chair of the Visual Arts Department at the University of California San Diego where she has been teaching since 2004. She graduated with a BFA from Cooper Union and received an MFA in Visual Art from UCLA and an MFA in Cinematic Arts from USC. As an artist and filmmaker, she has had one person shows at museums and galleries worldwide. Adler’s work is included in several permanent collections including The Broad Foundation, Los Angeles, The UCLA Hammer Museum, Los Angeles and The Museum of Contemporary Art, San Diego. To view her work please visit <a href="https://amyadler.com/" target="_blank">www.amyadler.com</a>
+      <p><img src="/assets/images/makeart/adler.jpeg" alt="" class="profile">Amy Adler is Professor and Chair of the Visual Arts Department at the University of California San Diego where she has been teaching since 2004. She graduated with a BFA from Cooper Union and received an MFA in Visual Art from UCLA and an MFA in Cinematic Arts from USC. As an artist and filmmaker, she has had one person shows at museums and galleries worldwide. Adler’s work is included in several permanent collections including The Broad Foundation, Los Angeles, The UCLA Hammer Museum, Los Angeles and The Museum of Contemporary Art, San Diego. To view her work please visit <a href="https://amyadler.com/" target="_blank">www.amyadler.com</a>
       </p>
   </div>
 </div>
 
-<div id="entertainment" class="block">
+
+<div id="entertainment" class="block block-green">
   <div class="container">
-    <h1>Entertainment</h1>
+    <h1>Entertainment<img class="h1-icon" src="/assets/images/makeart/entertainment.png" alt=""/></h1>
     {% for act in site.data.makeart.entertainment %}
       <h2>{{ act.title }}</h2>
     {% endfor %}
   </div>
 </div>
+
+<div id="sponsors" class="block block-gray">
+  <div class="container">
+   <h1>Sponsors</h1>
+   <h3>Thank you to our sponsors</h3>
+   <div id="sponsors-container">
+     {% for sponsor in site.data.makeart.sponsors %}
+     <img src="/assets/images/makeart/sponsors/{{ sponsor.img }}" alt="{{ sponsor.title }}">
+     {% endfor %}
+   </div>
+  </div>
+</div>
+
+
+<div id="volunteers" class="block block-dark">
+    <div class="container">
+      <h1>Volunteers</h1>
+      <p>
+          Make Art is looking for volunteers! The first 50 volunteers will receive a Make Art prize pack in thanks for their support. Sign up today to be part of the creative and quirky force behind this celebration of art at <a href="https://bit.ly/Volunteer4MakeArt" target="_blank">bit.ly/Volunteer4MakeArt</a>.
+          </p>
+    </div>
+  </div>
+
+<script>
+  const nav = document.getElementById('nav');
+  const NAVHEIGHT = 80;
+
+  function scrollToAnchor(anchor) {
+    event.preventDefault();
+
+    const scrollAmount = anchor.offsetTop;
+
+    window.scroll({
+      top: scrollAmount - NAVHEIGHT, 
+      left: 0, 
+      behavior: 'smooth'
+    });
+  }
+
+  let ACTIVELINK;
+
+  function updateNav() {
+    
+    let windowHeight = window.innerHeight;
+    let scroll = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
+
+    if (scroll + NAVHEIGHT >= windowHeight) {
+      nav.classList.add("opaque");
+    }
+    else {
+      nav.classList.remove("opaque");
+    }
+
+    const navList = document.getElementById("nav-ul");
+    const navLinks = navList.getElementsByTagName("a");
+    
+    let i;
+    for (i = 0; i < navLinks.length; i++) {
+      const currLink = navLinks[i];
+      const hash = currLink.getAttribute("href").replace("#", "");
+      const block = document.getElementById(hash);
+      const target = block.offsetTop - NAVHEIGHT;
+
+      // Determine curr block
+      if (scroll >= target && scroll < target + block.offsetHeight) {
+        
+        // Update ACTIVEBLOCK
+        if (!ACTIVELINK) {
+          ACTIVELINK = currLink;
+        }
+        else if (ACTIVELINK == currLink) {
+          return;
+        } else {
+          // Remove current active class
+          ACTIVELINK.classList.remove('active');
+          // Update ACTIVELINK ref
+          ACTIVELINK = currLink;
+          // Highlight new nav item
+          currLink.classList.add('active');
+        }
+
+      }
+    }
+  }
+
+  updateNav();
+  
+  document.addEventListener("scroll", function() {
+    updateNav();
+  });
+
+  window.addEventListener("resize", function() {
+    updateNav();
+  });
+
+</script>
+
+<script src="/assets/scripts/confetti-js-master/dist/index.min.js"></script>
+
+<script>
+  const FILM = document.getElementById('film');
+  const CANVAS = document.getElementById('film-canvas');
+
+  function resizeCanvas() {
+    CANVAS.width = FILM.clientWidth;
+    CANVAS.height = FILM.clientHeight;
+  }
+
+
+
+  var confettiSettings = { target: 'film-canvas', max: 400, "size":"2","animate":true,"props":["circle"],"colors":[[226,31,40]],"clock":"3","rotate":false, width: 4000, height: 4000 };
+
+  var confetti = new ConfettiGenerator(confettiSettings);
+  confetti.render();
+
+    // Resize canvas on load
+    //resizeCanvas();
+
+    // Resize canvas on window resize
+    window.addEventListener("resize", function() {
+      //resizeCanvas();
+    });
+</script>
+

@@ -14,8 +14,8 @@ nav:
     anchor: film
   - title: Entertainment
     anchor: entertainment
-  # - title: Sponsors
-#    anchor: sponsors
+  - title: Sponsors
+    anchor: sponsors
 
 art:
   - title: Welcome to the sweet suite
@@ -48,13 +48,16 @@ makersrow:
     host: Uyen Tran
   - title: Projection Mapping
     host: ICAM Student Association
-  - title: Adwave
+  - title: Dating App Makeover
+    host: Adwave
   - title: Design Your Own Apparel
     host: Triton Outfitters
   - title: Photo Booth
     host: KSDT Radio
   - title: Video Storytelling
     host: Triton Television
+  - title: Bracelet Making
+    host: Student Foundation
   - title: Songs from Hairspray
     host: Muir Musical
   - title: Photography & Zine
@@ -62,7 +65,8 @@ makersrow:
   - title: Decorate Your Own Mug
     host: The Zone (Located in PC Plaza, Open until 10 pm)
   - title: KIND Bar
-    host: Free BBQ from Ranchwood BBQ
+  - title: Coca-Cola
+  - title: Free BBQ from Ranchwood BBQ
 
 entertainment:
   - title: Viet Mai, ’03
@@ -70,3 +74,17 @@ entertainment:
   - title: Muir Musical
   - title: DVC
   - title: DJ Shneaky
+
+sponsors:
+  - title: Associated Students
+    img: as.jpeg
+  - title: "Student Affairs: Student Life"
+    img: student-affairs.png
+  - title: "Arts and Humanities: Visual Arts"
+    img: arts-and-humanities.jpeg
+  - title: University Centers
+    img: ucen.png
+  - title: Hudson Printing
+    img: hudson.png
+  - title: KIND
+    img: kind.png

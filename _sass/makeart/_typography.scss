@@ -1,15 +1,42 @@
+@font-face {
+  font-family: "Century Gothic";
+  src: url("/assets/fonts/CenturyGothic.eot");
+  src: url("/assets/fonts/CenturyGothic.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/CenturyGothic.woff2") format("woff2"),
+    url("/assets/fonts/CenturyGothic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("/assets/fonts/CenturyGothic-bold.eot");
+  src: url("/assets/fonts/CenturyGothic-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/CenturyGothic-bold.woff2") format("woff2"),
+    url("/assets/fonts/CenturyGothic-bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
 html {
-  font-size: 62.5%;
+  font-size: 45%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @include sm-up {
+    font-size: 62.5%;
+  }
 }
 
 body {
   font-family: "Century Gothic", "Helvetica", "Arial", sans-serif;
   font-size: 1.6rem;
   letter-spacing: 0.03rem;
-  line-height: 2.8rem;
+  line-height: 2.4rem;
   color: $gray;
+  @include sm-up {
+    line-height: 2.8rem;
+  }
 }
 
 h1,
@@ -21,9 +48,12 @@ h3 {
 
 h1 {
   font-size: 4rem;
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
   line-height: 4.9rem;
-  color: $green;
+  //color: $green;
+  @include sm-up {
+    margin-bottom: 8rem;
+  }
 }
 
 h2 {
@@ -72,4 +102,16 @@ a {
 
 hr {
   border-top: 0.2rem solid #ddd;
+}
+
+.h2-icon {
+  height: 4.5rem;
+  //display: inline-block;
+  margin-bottom: -1.2rem;
+  margin-left: 1.3rem;
+}
+
+.h1-icon {
+  @extend .h2-icon;
+  margin-bottom: -1rem;
 }
