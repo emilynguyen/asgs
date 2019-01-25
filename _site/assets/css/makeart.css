@@ -379,6 +379,42 @@ header {
     #infinity iframe {
       margin-bottom: 0; } }
 
+#act-container p {
+  margin: 1rem 0; }
+#act-container ul {
+  margin-left: 4rem;
+  list-style-type: disc; }
+
+.act-img-mobile {
+  width: 12rem;
+  display: inline-block;
+  float: left;
+  margin: 0 2rem 2rem 0; }
+  @media (min-width: 840px) {
+    .act-img-mobile {
+      display: none; } }
+
+.act-img-desktop {
+  display: none;
+  width: 25rem; }
+  @media (min-width: 840px) {
+    .act-img-desktop {
+      display: inline-block; } }
+
+.act {
+  clear: both;
+  height: 100%;
+  display: relative; }
+  @media (min-width: 840px) {
+    .act {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: auto 1fr;
+          grid-template-columns: auto 1fr;
+      grid-gap: 4rem; } }
+  .act:not(:last-child) {
+    margin-bottom: 8rem; }
+
 #sponsors-container {
   display: -webkit-box;
   display: -ms-flexbox;

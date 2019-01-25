@@ -158,9 +158,18 @@ permalink: /makeart/
 <div id="entertainment" class="block block-green">
   <div class="container">
     <h1>Entertainment<img class="h1-icon" src="/assets/images/makeart/entertainment.png" alt=""/></h1>
-    {% for act in site.data.makeart.entertainment %}
-      <h2>{{ act.title }}</h2>
-    {% endfor %}
+      <div id="act-container">
+      {% for act in site.data.makeart.entertainment %}
+      <div class="act">
+        <img class="act-img-desktop" src="/assets/images/makeart/entertainment/{{ act.img }}" alt="{{ act.title }}">
+        <div>
+          <h2>{{ act.title }}</h2>
+          <img class="act-img-mobile" src="/assets/images/makeart/entertainment/{{ act.img }}" alt="{{ act.title }}" {% unless act.description %}style="margin-bottom: 8rem;"{% endunless %}>
+          {{ act.description }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 

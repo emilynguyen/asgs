@@ -68,11 +68,20 @@ makersrow:
   - title: Free BBQ from Ranchwood BBQ
 
 entertainment:
-  - title: Viet Mai, ’03
+  - title: Viet Mai, '03
+    img: mai.png
+    description: <p>Viet Mai was born in San Diego, grew up in Serra Mesa, went to Kearny High School and later completed his BA in Math-Computer Science at the University of California, San Diego. He has experienced firsthand what it means to live in America’s Finest City and learned early on to celebrate the diversity it has to offer.</p><p>While a student at UCSD, Viet started working as a tutor and mentor for the Early Academic Outreach Program, where he found his passion working with young people to help them realize their potential. He even found his own voice through spoken word poetry, and has since been presenting his craft to vast audiences of students, educators, and communities at large. Through poetry and education, Mr. Viet has connected with community leaders throughout San Diego and other cities to inspire young people, promote civic engagement, celebrate art and culture, and elevate social consciousness. Highlights include:</p><ul><li>2017 National Poetry Slam Championship, San Diego PoetrySLAM Team</li><li>2016 Award of Merit, California Association of Teachers of English</li><li>2015 Special Commendation, The City of San Diego Race and Human Relations Commission</li><li>2014 Facilitator of the Year, Aaron Price Fellows Program</li></ul><p>Mr. Viet currently serves as a Program Facilitator with the Village of Promise Collective Mentoring Program, and as an Independent Consultant, specializing in Education, Data Analysis, and Community Development. In addition, he devoutly continues to edutain his audience as a Public Speaker, Host, and Spoken Word Artist.</p>
   - title: Jzov Stith-Gambles
+    img: stith-gambles.jpg
   - title: Muir Musical
+    img: muir-musical.jpg
+    description: '<p>The Muir Musical Ensemble is dedicated to developing exciting, innovative, and quality musical theatre experiences at UC San Diego, in a community that supports individual and artistic growth amongst all who are involved.</p>Recently honored as the 2018 Outstanding Student Organization of the Year at UC San Diego, Muir Musical strives to produce Broadway-scale musicals on an annual basis as an entirely student-run organization.</p><p>Muir Musical is proud to be the largest student-directed and produced musical theatre event on campus, comprised of over 70 students per year between all areas of the musical: cast, crew, production team, and orchestra. It is through the work of so many talented, passionate students that the "Muir Musical Experience" can continue to be a staple of so many students'' college experiences at UC San Diego.</p>'
   - title: DVC
+    img: dvc.jpg
+    description: <p>The DJs and Vinylphiles Club at UCSD, or DVC, was created as a source of support and information for electronic music and all forms of its expression. DVC is dedicated to training members in the arts of DJing, mixing, music production, and promotion. Members are able to experience almost every level of DJ culture by participation in organizing events on campus. These events serve not only to display members’ talent and dedication, but also to entertain, educate, and interact with an audience—the students of UCSD. DVC’s main focus is, and will always be, the enjoyment of music.</p>
   - title: DJ Shneaky
+    img: shneaky.jpg
+    description: <p>This socially conscious MC spent four years at UC San Diego honing his skills in performance and event management while earning degrees in History and the Study of Religion. A ball of raw energy on the microphone, SHNEAKY is a versatile artist who raps over a wide range of music from sample beats to a live rocking band, trap to boom bap, and has begun producing his own tracks based on his eclectic taste of music. His words and his delivery are drenched in emotion whether rapping about being pinned underneath a semi-truck or searching for himself in all the wrong places, his style rings true. In a time when people have access to infinite amounts of music, SHNEAKY reminds us that honest artistry reaches a deeper chord within all of us. His delivery can be likened to a boxer throwing haymakers in a title fight; the poetry leaves you staggering.</p>
 
 sponsors:
   - title: Associated Students
