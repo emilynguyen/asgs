@@ -16,7 +16,7 @@ body {
   max-width: 1800px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 1rem;
+  // padding: 0 1rem;
   box-sizing: content-box;
   @include sm-up {
     padding: 0 2rem;
@@ -30,8 +30,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   max-width: $xl-screen;
-  padding: 0 4vw;
-
+  padding: 0 6vw;
   @include md-up {
     padding: 0 5rem;
   }

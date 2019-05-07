@@ -61,7 +61,6 @@ body {
   max-width: 1800px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 1rem;
   box-sizing: content-box; }
   @media (min-width: 600px) {
     .outer-container {
@@ -74,7 +73,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   max-width: 1280px;
-  padding: 0 4vw; }
+  padding: 0 6vw; }
   @media (min-width: 840px) {
     .inner-container {
       padding: 0 5rem; } }
@@ -90,16 +89,38 @@ body {
     .home-block {
       margin-top: 10rem; } }
 
+/*
 @font-face {
   font-family: "Neuzeit Grotesk";
   src: url("/assets/fonts/NeuzeitGro-Bol.eot");
-  src: url("/assets/fonts/NeuzeitGro-Bol.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/NeuzeitGro-Bol.woff2") format("woff2"), url("/assets/fonts/NeuzeitGro-Bol.woff") format("woff");
+  src: url("/assets/fonts/NeuzeitGro-Bol.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/NeuzeitGro-Bol.woff2") format("woff2"),
+    url("/assets/fonts/NeuzeitGro-Bol.woff") format("woff");
   font-weight: bold;
-  font-style: normal; }
+  font-style: normal;
+}
+
 @font-face {
   font-family: "Neuzeit Grotesk";
   src: url("/assets/fonts/NeuzeitGro-Reg.eot");
-  src: url("/assets/fonts/NeuzeitGro-Reg.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/NeuzeitGro-Reg.woff2") format("woff2"), url("/assets/fonts/NeuzeitGro-Reg.woff") format("woff");
+  src: url("/assets/fonts/NeuzeitGro-Reg.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/NeuzeitGro-Reg.woff2") format("woff2"),
+    url("/assets/fonts/NeuzeitGro-Reg.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+} */
+@font-face {
+  font-family: "Century Gothic";
+  src: url("/assets/fonts/CenturyGothic-Bold.eot");
+  src: url("/assets/fonts/CenturyGothic-Bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/CenturyGothic-Bold.woff2") format("woff2"), url("/assets/fonts/CenturyGothic-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "Century Gothic";
+  src: url("/assets/fonts/CenturyGothic.eot");
+  src: url("/assets/fonts/CenturyGothic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/CenturyGothic.woff2") format("woff2"), url("/assets/fonts/CenturyGothic.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 html {
@@ -110,26 +131,26 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
-  font-size: 1.6rem;
-  font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-family: "Century Gothic", Helvetica, sans-serif;
   color: #585858;
-  line-height: 2.3rem;
+  line-height: 2.5rem;
   letter-spacing: 0.04rem; }
 
 h1 {
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: bold;
   color: #b7bf10;
-  line-height: 6rem;
+  line-height: 4rem;
   margin: 2rem 0; }
   @media (min-width: 600px) {
     h1 {
       margin: 3rem 0;
-      font-size: 9rem;
-      line-height: 9.2rem; } }
+      font-size: 8rem;
+      line-height: 8rem; } }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #b7bf10;
   line-height: 4rem;
@@ -137,8 +158,8 @@ h2 {
   @media (min-width: 600px) {
     h2 {
       margin: 3rem 0;
-      font-size: 5rem;
-      line-height: 5rem; } }
+      font-size: 4rem;
+      line-height: 4rem; } }
 
 h1,
 h2,
@@ -147,22 +168,23 @@ h4 {
   text-transform: lowercase; }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2.4rem;
   color: #3c454a;
   letter-spacing: 0;
-  line-height: 3.2rem;
+  line-height: 2.8rem;
   margin: 2rem 0 1.4rem; }
+  @media (min-width: 600px) {
+    h3 {
+      font-size: 3rem;
+      line-height: 3.2rem; } }
 
 h4 {
   color: #b7bf10;
   font-weight: bold; }
 
-p {
-  font-size: 1.6rem; }
-
 @media (min-width: 480px) {
   .small-text {
-    font-size: 1.4rem;
+    font-size: 85%;
     line-height: 2.1rem; } }
 
 a {
@@ -184,6 +206,9 @@ h3 a {
 h3 a {
   border-bottom: 0.2rem solid #3c454a; }
 
+b {
+  font-weight: bold; }
+
 .m-top-lg {
   margin-top: 12rem; }
 
@@ -197,19 +222,24 @@ h3 a {
   margin-bottom: 12rem; }
 
 header {
-  height: 14.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 10rem;
+  margin-bottom: 4rem; }
   header .inner-container {
     margin-top: 0.3rem;
     width: 100%; }
   @media (min-width: 600px) {
     header {
-      height: 16rem; }
+      margin-bottom: 8rem;
+      height: 10rem; }
       header .inner-container {
         margin-top: 0.8rem; } }
 
@@ -235,23 +265,19 @@ header {
       margin-bottom: 0; } }
 
 #nav {
-  margin-top: -1rem;
-  font-size: 1.5rem; }
-  @media (min-width: 840px) {
-    #nav {
-      font-size: 1.8rem; } }
+  margin-top: -1rem; }
   #nav li {
     display: inline-block; }
   #nav a {
-    font-weight: bold;
-    color: #b7bf10;
     border: none;
     text-transform: lowercase;
     text-decoration: none;
     display: inline-block;
-    padding: 0.5rem 1rem 0.2rem;
+    padding: 1.4rem 1.2rem 1.5rem;
+    line-height: 0;
     -webkit-transition: background-color 0.3s, color 0.3s, opacity 0.3s;
-    transition: background-color 0.3s, color 0.3s, opacity 0.3s; }
+    transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+    font-size: 85%; }
     #nav a:not(:last-child) {
       margin-right: 0.4rem; }
     #nav a.active {
@@ -259,7 +285,8 @@ header {
       background-color: #b7bf10; }
     @media (min-width: 840px) {
       #nav a {
-        padding: 1.4rem 2rem 0.8rem; }
+        font-size: 100%;
+        padding: 1.8rem 1.8rem 2rem; }
         #nav a:not(:last-child) {
           margin-right: 1rem; } }
 
@@ -276,14 +303,11 @@ footer {
       height: 20rem; } }
   footer h3 {
     margin-top: 0; }
-  footer h4 {
-    font-size: 2rem; }
   footer h3,
   footer h4 {
     font-weight: bold;
     color: #b7bf10; }
   footer p {
-    margin-top: 1rem;
     color: #585858; }
   footer a {
     border-bottom: 0.1rem solid #585858; }
@@ -314,37 +338,21 @@ footer {
         -ms-grid-column: auto;
             grid-column: auto; } }
 
-#confetti-container {
+#hero {
   overflow: hidden;
   height: 25rem;
-  height: 40vw;
+  height: 60vw;
   width: 100%;
   position: relative;
-  max-height: 45rem; }
-
-#confetti-container,
-#confetti-canvas {
-  background-color: #b7bf10; }
-
-#confetti-text {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  font-weight: bold;
-  letter-spacing: -0.04rem;
-  line-height: 0;
-  white-space: nowrap;
-  top: 50%;
-  font-size: 5vw; }
-  @media (min-width: 1024px) {
-    #confetti-text {
-      font-size: 5.1rem; } }
+  max-height: 70rem;
+  background-image: url("/assets/images/doors/sp19.png");
+  background-position: center center;
+  background-size: cover;
+  margin-top: -2rem; }
+  @media (min-width: 600px) {
+    #hero {
+      margin-top: -5rem;
+      height: 40vw; } }
 
 #news-container {
   display: -ms-grid;

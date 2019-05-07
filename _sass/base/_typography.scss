@@ -7,27 +7,14 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
-  font-size: 1.6rem;
-  font-family: "Neuzeit Grotesk", Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-family: "Century Gothic", Helvetica, sans-serif;
   color: $gray;
-  line-height: 2.3rem;
+  line-height: 2.5rem;
   letter-spacing: 0.04rem;
 }
 
 h1 {
-  font-size: 6rem;
-  font-weight: bold;
-  color: $green;
-  line-height: 6rem;
-  margin: 2rem 0;
-  @include sm-up {
-    margin: 3rem 0;
-    font-size: 9rem;
-    line-height: 9.2rem;
-  }
-}
-
-h2 {
   font-size: 4rem;
   font-weight: bold;
   color: $green;
@@ -35,8 +22,21 @@ h2 {
   margin: 2rem 0;
   @include sm-up {
     margin: 3rem 0;
-    font-size: 5rem;
-    line-height: 5rem;
+    font-size: 8rem;
+    line-height: 8rem;
+  }
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: $green;
+  line-height: 4rem;
+  margin: 2rem 0;
+  @include sm-up {
+    margin: 3rem 0;
+    font-size: 4rem;
+    line-height: 4rem;
   }
 }
 
@@ -48,11 +48,15 @@ h4 {
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2.4rem;
   color: $dark-gray;
   letter-spacing: 0;
-  line-height: 3.2rem;
+  line-height: 2.8rem;
   margin: 2rem 0 1.4rem;
+  @include sm-up {
+    font-size: 3rem;
+    line-height: 3.2rem;
+  }
 }
 
 h4 {
@@ -60,13 +64,9 @@ h4 {
   font-weight: bold;
 }
 
-p {
-  font-size: 1.6rem;
-}
-
 .small-text {
   @include xs-up {
-    font-size: 1.4rem;
+    font-size: 85%;
     line-height: 2.1rem;
   }
 }
@@ -90,4 +90,8 @@ h3 {
 
 h3 a {
   border-bottom: 0.2rem solid $dark-gray;
+}
+
+b {
+  font-weight: bold;
 }

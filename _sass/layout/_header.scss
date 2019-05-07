@@ -1,12 +1,15 @@
 header {
-  height: $header-height;
   display: flex;
   align-items: center;
+  align-items: flex-end;
+  height: $header-height;
+  margin-bottom: 4rem;
   .inner-container {
     margin-top: 0.3rem;
     width: 100%;
   }
   @include sm-up {
+    margin-bottom: 8rem;
     height: $header-height-sm;
     .inner-container {
       margin-top: 0.8rem;
@@ -33,22 +36,18 @@ header {
 
 #nav {
   margin-top: -1rem;
-  font-size: 1.5rem;
-  @include md-up {
-    font-size: 1.8rem;
-  }
   li {
     display: inline-block;
   }
   a {
-    font-weight: bold;
-    color: $accent;
     border: none;
     text-transform: lowercase;
     text-decoration: none;
     display: inline-block;
-    padding: 0.5rem 1rem 0.2rem;
+    padding: 1.4rem 1.2rem 1.5rem;
+    line-height: 0;
     transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+    font-size: 85%;
     &:not(:last-child) {
       margin-right: 0.4rem;
     }
@@ -57,7 +56,8 @@ header {
       background-color: $accent;
     }
     @include md-up {
-      padding: 1.4rem 2rem 0.8rem;
+      font-size: 100%;
+      padding: 1.8rem 1.8rem 2rem;
       &:not(:last-child) {
         margin-right: 1rem;
       }

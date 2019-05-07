@@ -1,3 +1,4 @@
+/*
 @font-face {
   font-family: "Neuzeit Grotesk";
   src: url("/assets/fonts/NeuzeitGro-Bol.eot");
@@ -16,6 +17,27 @@
       format("embedded-opentype"),
     url("/assets/fonts/NeuzeitGro-Reg.woff2") format("woff2"),
     url("/assets/fonts/NeuzeitGro-Reg.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("/assets/fonts/CenturyGothic-Bold.eot");
+  src: url("/assets/fonts/CenturyGothic-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/CenturyGothic-Bold.woff2") format("woff2"),
+    url("/assets/fonts/CenturyGothic-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("/assets/fonts/CenturyGothic.eot");
+  src: url("/assets/fonts/CenturyGothic.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/CenturyGothic.woff2") format("woff2"),
+    url("/assets/fonts/CenturyGothic.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
