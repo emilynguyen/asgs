@@ -345,7 +345,7 @@ footer {
   width: 100%;
   position: relative;
   max-height: 70rem;
-  background-image: url("/assets/images/doors/sp19.png");
+  background-image: url("/assets/images/doors/current.png");
   background-position: center center;
   background-size: cover;
   margin-top: -2rem; }
